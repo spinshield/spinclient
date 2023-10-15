@@ -47,7 +47,8 @@ Generic Helper functions:
 ```php
 // check for error code on api responses
 responseHasError($apiResponse);
-// morphs json to array
+
+// morphs json object to associative array
 morphJsonToArray($input);
 
 // because our API communicates using int value in cents, this can assist you to convert for example ($) 2.00 to 200 securely
