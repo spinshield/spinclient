@@ -1,9 +1,7 @@
 # Spinclient
 To assist easier integration for operators using PHP. Works on any PHP > 5, requires GuzzleHttp.
 
-You can use this package in your existing PHP based projects. 
-
-This includes any PHP based framework, like Laravel, Lumen, Yiii and so on.
+You can use this package in your existing PHP based projects. This includes any PHP based framework, like Laravel, Lumen, Yiii and so on.
 
 ## Install
 `composer require spinshield/spinclient`
