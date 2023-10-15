@@ -9,7 +9,7 @@ You can use this package in your existing PHP based projects. This includes any 
 ## Function Overview
 ### API Client Functions
 ```php
-// e.g. openGame("player123", "playerPass123", "platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", 0, "en");
+// e.g. getGame("player123", "playerPass123", "platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", 0, "en");
 getGame($username, $userpassword, $game_id, $currency, $homeurl, $cashierurl, $play_for_fun, $lang);
 
  // e.g. getGameList("USD", 1);
@@ -89,7 +89,7 @@ app/Http/Controllers/SpinController.php
 namespace App\Http\Controllers;
 use spinshield\spinclient;
 
-class SpinController extends \App\Http\Controllers\Controller
+class SpinController
 {
   function __construct()
   {
