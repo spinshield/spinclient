@@ -1,7 +1,7 @@
-## Spinshield API
+# Spinshield API
 To assist easier integration for operators using PHP. Works on any PHP > 5, requires GuzzleHttp.
 
-### Install
+## Install
 You can use this package in your existing PHP based projects. 
 
 This includes any PHP based framework, like Laravel, Lumen, Yiii and so on.
@@ -9,7 +9,7 @@ This includes any PHP based framework, like Laravel, Lumen, Yiii and so on.
 Run:
 `composer require spinshield/spinclient`
 
-### API Client
+## API Client
 This package includes API client to communicate with our api gameserver more easily. See examples below how to implement.
 
 API Client functions:
@@ -21,7 +21,7 @@ addFreeRounds($username, $userpassword, $game_id, $currency, $freespins, $betlev
 getFreeRounds($username, $userpassword, $currency); // e.g. getFreeRounds("player123", "playerPass123", "USD");
 ```
 
-### Helpers
+## Helpers
 This package also includes helpers to assist you in for example returning responses on callbacks. 
 
 Helper functions to assist you on callbacks:
@@ -41,8 +41,8 @@ intToFloatHelper($intValue); // converts int back to float (2 decimals)
 ```
 
 See examples below how to implement.
-### Examples
-#### PHP Usage Example
+## Examples
+### PHP Usage Example
 ```php
 <?php
 use spinshield/spinclient;
@@ -58,7 +58,7 @@ $client = new spinclient\ApiClient(array(
 var_export($client->getGamesList());
 ```
 
-#### Laravel Usage Example
+### Laravel Usage Example
 routes/web.php:
 ```php
 Route::get('/spinshield_example/gamelist', [\App\Http\Controllers\SpinController::class, 'gamelist']);
@@ -100,9 +100,6 @@ class SpinController extends \App\Http\Controllers\Controller
   }
 }
 ```
-
-Available under https://yourwebsite.com/spinshield_example/gamelist.
-
 
 
 
