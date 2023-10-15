@@ -15,7 +15,7 @@ This package includes API client to communicate with our api gameserver more eas
 API Client functions:
 ```php
 // e.g. openGame("player123", "playerPass123", "platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", 0, "en");
-getGame($username, $userpassword, $game_id, $currency, $homeurl, $cashierurl,$play_for_fun, $lang);
+getGame($username, $userpassword, $game_id, $currency, $homeurl, $cashierurl, $play_for_fun, $lang);
 
  // e.g. getGameList("USD", 1);
 getGameList($currency, $list_type);
