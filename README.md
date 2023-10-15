@@ -47,10 +47,16 @@ processingError();
 
 Generic Helper functions:
 ```php
-responseHasError($apiResponse); // check for error code on api responses
-morphJsonToArray($input); // morphs json to array
-floatToIntHelper($floatValue); // because our API communicates using int value in cents, this can assist you to convert for example ($) 2.00 to 200 securely
-intToFloatHelper($intValue); // converts int back to float (2 decimals)
+// check for error code on api responses
+responseHasError($apiResponse);
+// morphs json to array
+morphJsonToArray($input);
+
+// because our API communicates using int value in cents, this can assist you to convert for example ($) 2.00 to 200 securely
+floatToIntHelper($floatValue); 
+
+// converts int back to float (2 decimals)
+intToFloatHelper($intValue); 
 ```
 
 See examples below how to implement.
