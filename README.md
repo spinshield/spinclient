@@ -6,10 +6,8 @@ You can use this package in your existing PHP based projects. This includes any 
 ## Install
 `composer require spinshield/spinclient`
 
-## API Client
-This package includes API client to communicate with our api gameserver more easily. See examples below how to implement.
-
-API Client functions:
+## Function Overview
+### API Client Functions
 ```php
 // e.g. openGame("player123", "playerPass123", "platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", 0, "en");
 getGame($username, $userpassword, $game_id, $currency, $homeurl, $cashierurl, $play_for_fun, $lang);
@@ -27,8 +25,8 @@ addFreeRounds($username, $userpassword, $game_id, $currency, $freespins, $betlev
 getFreeRounds($username, $userpassword, $currency); 
 ```
 
-## Helpers
-This package also includes helpers to assist you in for example returning responses on callbacks. 
+### Helpers Functions
+This package also includes helpers to assist you in for example returning responses on callbacks. See examples below how to implement.
 
 Helper functions to assist you on callbacks:
 ```php
@@ -59,7 +57,6 @@ floatToIntHelper($floatValue);
 intToFloatHelper($intValue); 
 ```
 
-See examples below how to implement.
 ## Examples
 ### PHP Usage Example
 ```php
