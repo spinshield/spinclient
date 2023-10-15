@@ -106,7 +106,7 @@ class SpinController extends \App\Http\Controllers\Controller
     return $this->client->getGameList("USD", 1);
   }
 
-  public function exampleGameFlow() {
+  public function gameflow() {
     $createPlayer = $this->client->createPlayer("playerId1337", "playerPassword", "Tiernan", "USD");
     if($this->helpers->responseHasError($createPlayer)) {
       return $createPlayer;
