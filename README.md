@@ -14,11 +14,20 @@ This package includes API client to communicate with our api gameserver more eas
 
 API Client functions:
 ```php
-getGame($username, $userpassword, $game_id, $currency, $homeurl, $cashierurl,$play_for_fun, $lang); // returns game URL, e.g. openGame("player123", "playerPass123", "platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", 0, "en");
-getGameList($currency, $list_type); // e.g. getGameList("USD", 1);
-createPlayer($username, $userpassword, $usernickname, $currency); // e.g. createPlayer("player123", "playerPass123", "Malone", "USD");
-addFreeRounds($username, $userpassword, $game_id, $currency, $freespins, $betlevel); // e.g. addFreeRounds("player123", "playerPass123", "platipus/egyptiangold", "USD", 10, 0);
-getFreeRounds($username, $userpassword, $currency); // e.g. getFreeRounds("player123", "playerPass123", "USD");
+// e.g. openGame("player123", "playerPass123", "platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", 0, "en");
+getGame($username, $userpassword, $game_id, $currency, $homeurl, $cashierurl,$play_for_fun, $lang);
+
+ // e.g. getGameList("USD", 1);
+getGameList($currency, $list_type);
+
+ // e.g. createPlayer("player123", "playerPass123", "Malone", "USD");
+createPlayer($username, $userpassword, $usernickname, $currency);
+
+// e.g. addFreeRounds("player123", "playerPass123", "platipus/egyptiangold", "USD", 10, 0);
+addFreeRounds($username, $userpassword, $game_id, $currency, $freespins, $betlevel); 
+
+// e.g. getFreeRounds("player123", "playerPass123", "USD");
+getFreeRounds($username, $userpassword, $currency); 
 ```
 
 ## Helpers
@@ -26,10 +35,17 @@ This package also includes helpers to assist you in for example returning respon
 
 Helper functions to assist you on callbacks:
 ```php
-isValidKey($key, $timestamp, $salt); // validate the callback request coming from our gameserver, take 'key', 'timestamp' from each callback and salt from your apikey configuration in backoffice
-balanceResponse($intBalance); // construct balance response in JSON format
-insufficientBalance($intBalance); // construct insufficient balance in JSON format
-processingError(); //construct generic error reponse (when you have error processing callback) in JSON format
+// validate the callback request coming from our gameserver, take 'key', 'timestamp' from each callback and salt from your apikey configuration in backoffice
+isValidKey($key, $timestamp, $salt);
+
+ // construct balance response in JSON format
+balanceResponse($intBalance);
+
+ // construct insufficient balance in JSON format
+insufficientBalance($intBalance);
+
+//construct generic error reponse (when you have error processing callback) in JSON format
+processingError(); 
 ```
 
 Generic Helper functions:
