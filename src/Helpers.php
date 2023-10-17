@@ -20,7 +20,7 @@ class Helpers
      */
     public function isValidKey($key, $timestamp, $salt)
     {
-        if ($signature === (md5($timestamp.$salt))) {
+        if ($key === (md5($timestamp.$salt))) {
             return true;
         } else {
             return false;
