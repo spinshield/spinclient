@@ -3,16 +3,21 @@ To assist easier integration for operators using PHP. Works on any PHP > 5, requ
 
 You can use this package in your existing PHP based projects. This includes any PHP based framework, like Laravel, Lumen, Yiii and so on.
 
-## Install
+# Install
+Run in your PHP project:
 `composer require spinshield/spinclient`
 
 ## Function Overview
+
 ### API Client Functions
 ```php
 // e.g. getGame("player123", "playerPass123", "platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", 0, "en");
 getGame($username, $userpassword, $game_id, $currency, $homeurl, $cashierurl, $play_for_fun, $lang);
 
- // e.g. getGameList("USD", 1);
+// e.g. getGameDemo("platipus/egyptiangold", "USD", "https://casino.com", "https://casino.com/deposit", "en");
+getGameDemo($game_id, $currency, $homeurl, $cashierurl, $lang);
+
+// e.g. getGameList("USD", 1);
 getGameList($currency, $list_type);
 
  // e.g. createPlayer("player123", "playerPass123", "Malone", "USD");

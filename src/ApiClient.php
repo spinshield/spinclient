@@ -133,9 +133,38 @@ class ApiClient
         ]);
         return $response->getBody();
     }
-    
+        
     /**
-     * Retrieves game information.
+     * Creates a demo session, return game URL you serve to your players.
+     *
+     * @param $game_id
+     * @param $currency
+     * @param $homeurl
+     * @param $cashierurl
+     * @param $lang
+     * @return mixed
+     * @throws Exception
+     */
+    public function getGameDemo(
+        $game_id,
+        $currency,
+        $homeurl,
+        $cashierurl,
+        $lang
+    ) {
+        $response = $this->sendRequest('post', 'getGameDemo', [
+            'gameid' => $game_id,
+            'homeurl' => $homeurl,
+            'cashierurl' => $cashierurl,
+            'lang' => $lang,
+            'currency' => strtoupper($currency),
+        ]);
+        return $response->getBody();
+    }
+    
+
+    /**
+     * Creates a game session, return game URL you serve to your players.
      *
      * @param $username
      * @param $userpassword
@@ -167,7 +196,7 @@ class ApiClient
             'gameid' => $game_id,
             'homeurl' => $homeurl,
             'cashierurl' => $cashierurl,
-            'play_for_fun' => $play_for_fun,
+            'play_for_fun' => (int) $play_for_fun,
             'lang' => $lang,
             'currency' => strtoupper($currency),
         ]);
