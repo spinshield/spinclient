@@ -55,13 +55,13 @@ class ApiClient
      * @return mixed
      */
     public function getGameList(
-        string $currency = "USD",
-        int $list_type = 1
+        string $currency,
+        int $list_type
     ) {
         $response = $this->sendRequest('post', 'getGameList', [
             'show_additional' => true,
             'show_systems' => 0,
-            'list_type' => $list_type,
+            'list_type' => (int) $list_type,
             'currency' => strtoupper($currency),
         ]);
         return $response->getBody();
