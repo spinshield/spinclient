@@ -98,7 +98,7 @@ class SpinController
 {
   function __construct()
   {
-    $this->api_client = new spinclient\ApiClient(array(
+    $this->client = new spinclient\ApiClient(array(
       "endpoint" => "https://secretendpoint.net",
       "api_login" => "12345",
       "api_password" => "12345",
