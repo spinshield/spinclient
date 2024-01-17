@@ -77,7 +77,7 @@ $client = new spinclient\ApiClient(array(
     "api_password" => "12345",
 ));
 
-var_export($client->getGamesList());
+var_export($client->getGamesList("USD", 1));
 ```
 
 ### Laravel Usage Example
