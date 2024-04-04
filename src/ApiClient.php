@@ -161,8 +161,30 @@ class ApiClient
         ]);
         return $response->getBody();
     }
+        
+    /**
+     * Deactivates all active free rounds on specified game for a player
+     *
+     * @param $game_id
+     * @param $username
+     * @param $userpassword
+     * @param $currency
+     */
+    public function deleteFreeRounds(
+        $game_id,
+        $username,
+        $userpassword,
+        $currency
+    ) {
+        $response = $this->sendRequest('post', 'deleteFreeRounds', [
+            'gameid' => $game_id,
+            'user_username' => $username,
+            'user_password' => $userpassword,
+            'currency' => strtoupper($currency),
+        ]);
+        return $response->getBody();
+    }
     
-
     /**
      * Creates a game session, return game URL you serve to your players.
      *
