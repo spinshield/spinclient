@@ -27,7 +27,10 @@ createPlayer($username, $userpassword, $usernickname, $currency);
 addFreeRounds($username, $userpassword, $game_id, $currency, $freespins, $betlevel); 
 
 // e.g. getFreeRounds("player123", "playerPass123", "USD");
-getFreeRounds($username, $userpassword, $currency); 
+getFreeRounds($username, $userpassword, $currency);
+
+// e.g. deleteFreeRounds("platipus/egyptiangold", "player123", "playerPass123", "USD");
+deleteFreeRounds($gameid, $username, $userpassword, $currency);
 ```
 
 ### Helpers Functions
