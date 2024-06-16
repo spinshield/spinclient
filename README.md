@@ -31,6 +31,10 @@ getFreeRounds($username, $userpassword, $currency);
 
 // e.g. deleteFreeRounds("platipus/egyptiangold", "player123", "playerPass123", "USD");
 deleteFreeRounds($gameid, $username, $userpassword, $currency);
+
+// e.g. deleteFreeRounds("player123", "playerPass123", "USD");
+deleteAllFreeRounds($username, $userpassword, $currency);
+
 ```
 
 ### Helpers Functions
