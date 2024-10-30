@@ -20,7 +20,7 @@ getGameDemo($game_id, $currency, $homeurl, $cashierurl, $lang);
 // e.g. getGameList("USD", 1);
 getGameList($currency, $list_type);
 
- // e.g. createPlayer("player123", "playerPass123", "Malone", "USD");
+// e.g. createPlayer("player123", "playerPass123", "Malone", "USD");
 createPlayer($username, $userpassword, $usernickname, $currency);
 
 // e.g. addFreeRounds("player123", "playerPass123", "platipus/egyptiangold", "USD", 10, 0);
@@ -45,10 +45,10 @@ Helper functions to assist you on callbacks:
 // validate the callback request coming from our gameserver, take 'key', 'timestamp' from each callback and salt from your apikey configuration in backoffice
 isValidKey($key, $timestamp, $salt);
 
- // construct balance response in JSON format
+// construct balance response in JSON format
 balanceResponse($intBalance);
 
- // construct insufficient balance in JSON format
+// construct insufficient balance in JSON format
 insufficientBalance($intBalance);
 
 //construct generic error reponse (when you have error processing callback) in JSON format
@@ -84,7 +84,7 @@ $client = new spinclient\ApiClient(array(
     "api_password" => "12345",
 ));
 
-var_export($client->getGamesList("USD", 1));
+var_export($client->getGameList("USD", 1));
 ```
 
 ### Laravel Usage Example
